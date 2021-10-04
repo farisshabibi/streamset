@@ -1,0 +1,86 @@
+TAKE UBUNTU 18.04
+
+
+sudo apt update
+
+sudo apt install default-jdk -y
+
+sudo wget https://packages.confluent.io/archive/5.5/confluent-5.5.0-2.12.tar.gz
+
+sudo tar xvzf confluent-5.5.0-2.12.tar.gz
+
+sudo nano /etc/profile
+
+export PATH=/home/ubuntu/confluent-5.5.0/bin:$PATH
+
+source /etc/profile
+
+/home/ubuntu/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:0.1.0
+ 
+ cd bin/
+
+confluent local  start
+
+Your output should resemble:
+
+
+Starting Zookeeper
+Zookeeper is [UP]
+Starting Kafka
+Kafka is [UP]
+Starting Schema Registry
+Schema Registry is [UP]
+Starting Kafka REST
+Kafka REST is [UP]
+Starting Connect
+Connect is [UP]
+Starting KSQL Server
+KSQL Server is [UP]
+
+
+
+
+
+
+                    KAFKA NEW SCRIPT 
+                    
+sudo apt update
+sudo apt install default-jdk -y
+
+sudo wget https://packages.confluent.io/archive/5.5/confluent-5.5.0-2.12.tar.gz                    
+
+ tar -zxvf confluent-5.5.0-2.12.tar.gz
+
+cd confluent-5.5.0/
+
+ls
+
+pwd
+
+sudo nano /etc/profile
+
+export PATH=/home/ubuntu/confluent-5.5.0/bin:$PATH
+
+
+source /etc/profile
+
+echo $PATH
+
+/home/ubuntu/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:0.1.0
+
+ cd bin/
+
+
+
+confluent local start
+
+
+
+
+
+
+
+
+
+
+
